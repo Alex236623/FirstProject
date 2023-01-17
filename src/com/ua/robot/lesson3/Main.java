@@ -1,8 +1,6 @@
 package com.ua.robot.lesson3;
 
-
 import java.util.Scanner;
-
 
 public class Main {
 
@@ -13,6 +11,7 @@ public class Main {
             Scanner scanner1 = new Scanner(System.in);
             System.out.print("Enter first number:");
             float fromInput1 = scanner1.nextInt();
+
             Scanner operation = new Scanner(System.in);
             System.out.println("Choose operation you want to make press:");
             System.out.println("1- for operation +");
