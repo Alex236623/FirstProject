@@ -40,7 +40,7 @@ public class Main extends Application {
         final TextField screen = createScreen();
         final TilePane buttons = createButtons();
 
-        stage.setTitle("Calc");
+        stage.setTitle("Calculator");
         stage.initStyle(StageStyle.UTILITY);
         stage.setResizable(false);
         stage.setScene(new Scene(createLayout(screen, buttons)));
@@ -119,13 +119,14 @@ public class Main extends Application {
     }
 
     private void makeOperandButton(Button button, final ObjectProperty<Op> triggerOp) {
-        button.setStyle("-fx-base: lightgray;");
+        button.setStyle("-fx-base: blue;");
         button.setOnAction(actionEvent -> curOp = triggerOp.get());
     }
 
+
     private Button makeStandardButton(String s) {
         Button button = new Button(s);
-        button.setStyle("-fx-base: beige;");
+        button.setStyle("-fx-base: black;");
         accelerators.put(s, button);
         button.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         return button;
@@ -145,12 +146,12 @@ public class Main extends Application {
     }
 
     private void makeClearButton(Button button) {
-        button.setStyle("-fx-base: mistyrose;");
+        button.setStyle("-fx-base: green;");
         button.setOnAction(actionEvent -> value.set(0));
     }
 
     private void makeEqualsButton(Button button) {
-        button.setStyle("-fx-base: ghostwhite;");
+        button.setStyle("-fx-base: white;");
         button.setOnAction(actionEvent -> {
             switch (stackOp) {
                 case ADD -> value.set(stackValue.get() + value.get());

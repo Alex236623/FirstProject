@@ -1,74 +1,61 @@
 package com.ua.robot.lesson4;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
-import javafx.geometry.Orientation;
-import javafx.scene.control.Label;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 public class Main extends Application {
 
+
     public void start(Stage primaryStage) {
-        FlowPane root = new FlowPane(Orientation.VERTICAL, 5,5);
+        primaryStage.setTitle("Программа для обробки символьних рядків");
+        primaryStage.setWidth(300);
+        primaryStage.setHeight(400);
 
+        VBox vbox = new VBox();
+        vbox.setPadding(new Insets(10, 10, 10, 10));
+        vbox.setSpacing(10);
+        TextField text = new TextField();
+        Button btn1 = new Button("Обробити символьні рядки");
+        Label label = new Label("Результат:");
+        Label label2 = new Label();
+        Label label3 = new Label();
+        Label label4 = new Label();
+        label.setVisible(false);
+        label2.setVisible(false);
+        label3.setVisible(false);
+        label4.setVisible(false);
 
-        TextField textField = new TextField();
-
-
-        textField.textProperty().addListener((observable, oldValue, newValue) -> {
-            System.out.println("text-field changed from " + oldValue + " to " + newValue);
-            System.out.println(newValue.toUpperCase());
-            System.out.println(newValue.charAt(0));
+        text.textProperty().addListener((observable, oldValue, newValue) -> {
+            label2.setText("UpperCase : "+newValue.toUpperCase());
+            label3.setText("Перший символ: "+ (newValue.charAt(0)));
             int lastChar = newValue.length() - 1;
-            System.out.println(newValue.charAt(lastChar));
-
-
+            label4.setText("Останній симовл: "+ newValue.charAt(lastChar));
         });
 
-        Label label = new Label("Резултат у консолі... такі справи... ");
+        btn1.setOnAction(actionEvent -> {
 
-
-        root.getChildren().add(label);
-        root.getChildren().add(textField);
-
-        Button button = new Button("Кнопка не працює....(!)Ахах");
-        root.getChildren().add(button);
-
-        Scene scene = new Scene(root, 400, 300);
-
-        primaryStage.setTitle("Програма для обробки символьних рядків");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        button.setOnAction(event -> root.getChildren().setAll(button));
-    }
-
-    public static class Controller {
-        @FXML
-        public TextField text;
-        @FXML
-        private Button button;
-        @FXML
-        private Label label;
-
-        public void handleButtonPress() {
-            text.setVisible(false);
-            button.setVisible(false);
             label.setVisible(true);
+            label2.setVisible(true);
+            label3.setVisible(true);
+            label4.setVisible(true);
+        });
 
-        }
+
+        vbox.getChildren().addAll(text, btn1, label, label2, label3, label4);
+        Scene primaryScene = new Scene(vbox);
+        primaryStage.setScene(primaryScene);
+
+        primaryStage.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+
 }
-
-
-
 
 
