@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -45,6 +46,12 @@ public class Main extends Application {
         text.textProperty().addListener((observable, oldValue, newValue) -> result1 = Integer.parseInt(newValue));
         text2.textProperty().addListener((observable, oldValue, newValue2) -> result2 = Integer.parseInt(newValue2));
 
+
+        btn1.setEffect(new DropShadow());
+
+
+      
+
         btn1.setOnAction(actionEvent -> {
 
             if (result1 == result2) {
@@ -76,6 +83,18 @@ public class Main extends Application {
         Scene primaryScene = new Scene(pane);
         primaryStage.setScene(primaryScene);
         primaryStage.show();
+        System.out.println(numbersFromOneToTen());
+    }
+    public static String numbersFromOneToTen() {
+        StringBuilder iCount = new StringBuilder();
+        int i = 1;
+        while (i<=10) {
+
+           iCount.append(i).append(" ");
+            i++;
+
+        }
+        return iCount.toString();
     }
 
 
