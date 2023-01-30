@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ua.robot.lesson6.Controller">
+    <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="50.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+    <Button layoutX="278.0" layoutY="26.0" mnemonicParsing="false" onAction="#start" text="Reset" />
+    <Label fx:id="label" layoutX="58.0" layoutY="294.0" />
+   <Line endX="500.0" layoutX="100.0" layoutY="240.0" startX="-100.0" />
+   <Line endX="150.5" endY="145.0" startX="150.5" startY="240.5" />
+   <Line endX="300.5" endY="139.0" layoutX="148.0" layoutY="3.0" startX="300.5" startY="237.5" />
+   <Line endX="149.5" endY="322.5" layoutX="151.0" layoutY="-83.0" startX="149.5" startY="228.0" />
+   <Label layoutX="14.0" layoutY="80.0" prefHeight="40.0" prefWidth="131.0" text="Завдання № 1&#10;Числа від 1 до 10" />
+   <Label layoutX="159.0" layoutY="79.0" prefHeight="76.0" prefWidth="131.0" text="Завдання № 2&#10;всі парні числа в&#10; діапазоні&#10; від 1 до 100 " />
+   <Label layoutX="309.0" layoutY="80.0" prefHeight="40.0" prefWidth="131.0" text="Завдання № 3&#10;факторіал числа 7" />
+   <Label layoutX="449.0" layoutY="80.0" prefHeight="55.0" prefWidth="131.0" text="Завдання № 4&#10;числа фібоначчі&#10; до 100" />
+   <Label layoutX="14.0" layoutY="353.0" prefHeight="40.0" prefWidth="562.0" text="Tip: Use A D buttons for moving.&#10;Press W for result" textFill="#8d8484" />
+</AnchorPane>
