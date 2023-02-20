@@ -18,7 +18,7 @@ public class TypeC extends Car {
     }
 
     /*перевизначений метод ↓*/
-    private void setCarType() {
+    protected void setCarType() {
         if (carCargo > 0 && carCargo <= 2) {
             setCarType("C1");
         } else if (carCargo > 2 && carCargo <= 5) {

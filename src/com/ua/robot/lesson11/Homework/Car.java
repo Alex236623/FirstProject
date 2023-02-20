@@ -1,6 +1,6 @@
 package com.ua.robot.lesson11.Homework;
 
-public class Car {
+public abstract class Car {
     protected String brand;
     protected String model;
     protected String carType = "Car";
@@ -49,4 +49,7 @@ public class Car {
         this.model = model;
         this.productionYear = productionYear;
     }
+
+    /*перевизначений метод ↓*/
+    protected abstract void setCarType();
 }
