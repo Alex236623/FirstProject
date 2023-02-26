@@ -1,4 +1,4 @@
-package com.ua.robot.lesson11.nfs;
+package com.ua.robot.oop.lesson11.nfs;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package com.ua.robot.lesson12;
+package com.ua.robot.oop.lesson12;
 
 public class GrandParent {
 
