@@ -1,4 +1,4 @@
-package com.ua.robot.lesson11.Homework;
+package com.ua.robot.oop.lesson11.Homework;
 
 public class Main {
 
