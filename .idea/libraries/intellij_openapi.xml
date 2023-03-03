@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="intellij-openapi">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.jdks/intellij-openapi" />
+      <root url="file://$USER_HOME$/.jdks/intellij-openapi/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/.jdks/intellij-openapi/lib" recursive="false" />
+  </library>
+</component>
