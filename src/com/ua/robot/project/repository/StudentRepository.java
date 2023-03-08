@@ -8,6 +8,7 @@ import static com.ua.robot.project.repository.StringGenerator.generateLastName;
 import static com.ua.robot.project.repository.StringGenerator.generateName;
 
 public class StudentRepository {
+
     public static final int SIZE = 10;
     private final Student[] students = new Student[SIZE];
 
@@ -28,6 +29,7 @@ public class StudentRepository {
         return students;
     }
 
+
     private void fillArrayYWithRandomStudents() {
         for (int i = 0; i < 10; i++) {
             Student students = getRandomStudent();
@@ -43,7 +45,7 @@ public class StudentRepository {
         int age = random.nextInt(15, 40);
         int[] grades = new int[10];
         for (int i = 0; i < grades.length; i++) {
-            grades[i] = random.nextInt(1, 12); // генеруємо випадкове число від 0 до 100
+            grades[i] = random.nextInt(1, 100);
         }
         return new Student(0, firstName, lastName, age, grades);
     }
