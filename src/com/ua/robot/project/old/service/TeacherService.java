@@ -1,8 +1,8 @@
-package com.ua.robot.project.service;
+package com.ua.robot.project.old.service;
 
 
-import com.ua.robot.project.domain.Teacher;
-import com.ua.robot.project.repository.TeacherRepository;
+import com.ua.robot.project.old.domain.Teacher;
+import com.ua.robot.project.old.repository.TeacherRepository;
 
 public class TeacherService{
     final int[] tableSize = {5, 25, 30, 10};

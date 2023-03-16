@@ -1,11 +1,11 @@
-package com.ua.robot.project.repository;
+package com.ua.robot.project.old.repository;
 
-import com.ua.robot.project.domain.Teacher;
+import com.ua.robot.project.old.domain.Teacher;
 
 import java.util.Random;
 
-import static com.ua.robot.project.repository.StringGenerator.generateLastName;
-import static com.ua.robot.project.repository.StringGenerator.generateName;
+import static com.ua.robot.project.old.repository.StringGenerator.generateLastName;
+import static com.ua.robot.project.old.repository.StringGenerator.generateName;
 
 public class TeacherRepository {
     public static final int SIZE = 3;

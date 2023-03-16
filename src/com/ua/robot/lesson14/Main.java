@@ -1,6 +1,6 @@
 package com.ua.robot.lesson14;
 
-import com.ua.robot.project.repository.StringGenerator;
+import com.ua.robot.project.old.repository.StringGenerator;
 
 import java.util.Random;
 
