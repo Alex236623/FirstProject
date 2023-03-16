@@ -1,22 +1,24 @@
-package com.ua.robot.project.domain;
+package com.ua.robot.project.old.domain;
 
-public class Teacher {
+import java.util.Arrays;
+
+public class Student {
     private int id;
     private String firstName;
     private String lastName;
     private int age;
+    private int[] grades;
 
-
-    public Teacher() {
+    public Student() {
 
     }
 
-    public Teacher(int id, String firstName, String lastName, int age) {
+    public Student(int id, String firstName, String lastName, int age, int[] grades) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-
+        this.grades = grades;
     }
 
     public int getId() {
@@ -51,13 +53,22 @@ public class Teacher {
         this.age = age;
     }
 
+    public int[] getGrades() {
+        return grades;
+    }
+
+    public void setGrades(int[] grades) {
+        this.grades = grades;
+    }
+
     @Override
     public String toString() {
-        return "Teacher{" +
+        return "Student{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
+                ", grades=" + Arrays.toString(grades) +
                 '}';
     }
 }

@@ -1,11 +1,11 @@
-package com.ua.robot.project.repository;
+package com.ua.robot.project.old.repository;
 
-import com.ua.robot.project.domain.Student;
+import com.ua.robot.project.old.domain.Student;
 
 import java.util.Random;
 
-import static com.ua.robot.project.repository.StringGenerator.generateLastName;
-import static com.ua.robot.project.repository.StringGenerator.generateName;
+import static com.ua.robot.project.old.repository.StringGenerator.generateLastName;
+import static com.ua.robot.project.old.repository.StringGenerator.generateName;
 
 public class StudentRepository {
 
@@ -38,7 +38,7 @@ public class StudentRepository {
         }
     }
 
-    private static Student getRandomStudent() {
+    public static Student getRandomStudent() {
         Random random = new Random();
         String firstName = generateName();
         String lastName = generateLastName();

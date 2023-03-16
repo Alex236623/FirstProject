@@ -1,7 +1,7 @@
-package com.ua.robot.project.service;
+package com.ua.robot.project.old.service;
 
-import com.ua.robot.project.domain.Student;
-import com.ua.robot.project.repository.StudentRepository;
+import com.ua.robot.project.old.domain.Student;
+import com.ua.robot.project.old.repository.StudentRepository;
 
 
 import java.util.Arrays;

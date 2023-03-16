@@ -1,4 +1,4 @@
-package com.ua.robot.project.domain;
+package com.ua.robot.lesson18;
 
 import java.util.Arrays;
 
