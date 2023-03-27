@@ -13,13 +13,9 @@ public class Main {
         students.add(new Student("Ivan", new int[]{77, 25, 79, 21, 23}));
         students.add(new Student("Artem", new int[]{12, 16, 6, 2, 3}));
         students.add(new Student("Anna", new int[]{99, 89, 95, 87, 98}));
-        System.out.println("Оригінал                 :" + students);
 
-        students.sort(Comparator.comparing(Student::getName));
-        System.out.println("Сорт по імені            :" + students);
-
-        students.sort(Comparator.comparing(Student::getMidGrade));
-        System.out.println("Сорт по середній оцінці  :" + students);
-
+        students.forEach(System.out::println);
+        students.stream().sorted(Comparator.comparing(Student::getName)).forEach(System.out::println);
+        students.stream().sorted(Comparator.comparing(Student::getMidGrade)).forEach(System.out::println);
     }
 }
