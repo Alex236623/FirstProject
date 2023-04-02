@@ -14,8 +14,11 @@ public class Main {
         students.add(new Student("Artem", new int[]{12, 16, 6, 2, 3}));
         students.add(new Student("Anna", new int[]{99, 89, 95, 87, 98}));
 
-        students.forEach(System.out::println);
-        students.stream().sorted(Comparator.comparing(Student::getName)).forEach(System.out::println);
-        students.stream().sorted(Comparator.comparing(Student::getMidGrade)).forEach(System.out::println);
+        students.stream()
+                .peek(System.out::println)
+                .sorted(Comparator.comparing(Student::getName))
+                .peek(System.out::println)
+                .sorted(Comparator.comparing(Student::getMidGrade))
+                .forEach(System.out::println);
     }
 }
